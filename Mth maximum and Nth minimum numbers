@@ -1,0 +1,21 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {14, 16, 87, 36, 25, 89, 34};
+        int M = 1; // Mth maximum
+        int N = 3; // Nth minimum
+        Arrays.sort(arr);
+        int nthMin = arr[N - 1];
+        int mthMax = arr[arr.length - M];
+
+        int sum = mthMax + nthMin;
+        int diff = mthMax - nthMin;
+
+        System.out.println(M + "st Maximum Number = " + mthMax);
+        System.out.println(N + "rd Minimum Number = " + nthMin);
+        System.out.println("Sum = " + sum);
+        System.out.println("Difference = " + diff);
+    }
+}
